@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta name="viewport" content="width=device=width, initial-scale=1" />
+    <title>Smart Home Monitoring Interface</title>
+  </head>
+  <h1 class="header">HARRISON'S SMARTHOME</h1>
+  <body>
+    <%- include('layouts/menu') -%>
+    <div class="Navitgation">
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
+    </div>
+<form>
+    <main>
+      <div class="inputs" <label>DATE / TIME <p id="datetime"></p></label></div>
+
+      <div class="inputs"><label>Device Name: </label><input type="text" placeholder="Enter Device name" id="Device_name" /></div>
+      <br />
+      <div class="inputs"><label>Postal Code: </label><input type="text" placeholder="Enter Postal Code" id="Postal_code" /></div>
+      <div id="error-message" style="display: none;">Invalid postal code format. Please enter a valid Canadian postal code (A1A 1A1).</div>
+      <br />
+      <div class="inputs">
+        <label for="Notifications"> Choose type:</label>
+        <select type="type" id="notifications">
+          <option value="1">ON</option>
+          <option value="2">OFF</option>
+        </select>
+        <div id="notifications-display">Notifications: </div>
+        <br />
+      </div>
+        
+      <div class="inputs">
+        <label for="Lighting Mode"> Choose type:</label>
+        <select type="type" id="lighting-mode">
+          <option value="1">Eco</option>
+          <option value="2">OFF</option>
+          <option value="3">Away</option>
+          <option value="4">Full</option>
+        </select>
+        <div id="lighting-mode-display">Lighting Mode: </div>
+        <br />
+      </div>
+
+      <div id="output-container"></div>
+    <label class="inputs"for="temperature-slider">Select temperature:</label>
+    <input type="range" min="10" max="25" step="0.5" class="slider" id="temperature-slider">
+    <div id="temperature-display">&deg;C</div>
+    <br/>
+    <div class="temporary-temp">temporary temp:</div>
+    <div class="temporary-time">Timer:</div>
+
+    <h2>Temporary Tempuratre</h2>
+      
+      
+      <div class="input-temp">
+        <label for="hours-input">Duration:</label>
+        <input id="hours-input" type="number" min="0" max="24" step="1" value="0">
+        <span>:</span>
+        <input id="minutes-input" type="number" min="0" max="59" step="1" value="10">
+      </div>
+    </div>
+    
+    
+    <input type="submit" value="Submit" id="submit-btn">
+    <button  id="reset-btn" type="reset" onclick="location.reload()">Reset</button>
+    </main>
+    <footer>
+   <%- include('layouts/footer') -%>
+    </footer>
+  </form>
+    <script src="/js/Assignment.js"></script>
+  </body>
+</html>

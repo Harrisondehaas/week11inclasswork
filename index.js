@@ -24,10 +24,23 @@ app.use(bodyParser.urlencoded({exteneded:true}));
 app.listen(PORT, () => {
   console.log("App listening on port ", PORT);
 });
+app.get("/ASSIGNMENT", (req, res) => {
+  //res.sendFile(path.resolve(__dirname + "/views/", "index.html"));
+  res.render("ASSIGNMENT");
+ });
+ app.get("/terms", (req, res) => {
+  //res.sendFile(path.resolve(__dirname + "/views/", "index.html"));
+  res.render("terms");
+ });
+ app.get("/myprofile", (req, res) => {
+  //res.sendFile(path.resolve(__dirname + "/views/", "index.html"));
+  res.render("myprofile");
+ });
 app.get("/slide-show", (req, res) => {
   //res.sendFile(path.resolve(__dirname + "/views/", "index.html"));
   res.render("slide-show");
  });
+
 app.get("/", (req, res) => {
   //res.sendFile(path.resolve(__dirname + "/views/", "index.html"));
   res.render("index");
