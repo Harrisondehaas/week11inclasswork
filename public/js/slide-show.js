@@ -1,37 +1,50 @@
 "use strict";
 
+// Select the first element that matches the selector
 const $ = (selector) => document.querySelector(selector);
 
+// Counter for current image, and references to HTML elements
 let imageCounter = 0;
 const caption = $("#caption");
 const mainImage = $("#main_image");
-let imageCache = [];
+const prevButton = document.getElementById("prev_button");
+const nextButton = document.getElementById("next_button");
 
-const swapImage = ()=>{
-    imageCounter = (imageCounter +1) % imageCache.length;
+// An array to hold preloaded images
+let imageCache = ['DirtBike.jpg', 'DirtBike2.jpg', 'DirtBike3.jpg', 'DirtBike4.jpg', 'DirtBike5.jpg' ];
 
+// Function to swap images and captions
+const swapImage = () => {
     mainImage.src = imageCache[imageCounter].src;
     mainImage.alt = imageCache[imageCounter].alt;
-
     caption.textContent = imageCache[imageCounter].alt;
-    
-}
-document.addEventListener("DOMContentLoaded", () => {
-  
+};
 
+// Event listeners for previous and next buttons
+
+
+
+nextButton.addEventListener("click", () => {
+    imageCounter = (imageCounter + 1) 
+    swapImage();
+});
+prevButton.addEventListener("click", () => {
+    imageCounter = (imageCounter - 1 )
+    swapImage();
+});
+
+
+// Load images and add them to imageCache array
+document.addEventListener("DOMContentLoaded", () => {
     const links = document.querySelectorAll("a");
 
-    let image;
-
-
-
-    for(let link of links){
-        image = new Image();
-
+    for (let link of links) {
+        let image = new Image();
         image.src = link.href;
         image.alt = link.title;
-
         imageCache.push(image);
     }
-    setInterval(swapImage, 2000);
+
+    // Auto cycle through images
+    setInterval(swapImage, 4000);
 });

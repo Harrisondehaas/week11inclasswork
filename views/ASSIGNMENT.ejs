@@ -10,12 +10,7 @@
   <h1 class="header">HARRISON'S SMARTHOME</h1>
   <body>
     <%- include('layouts/menu') -%>
-    <div class="Navitgation">
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="profile.html">Profile</a></li>
-      </ul>
-    </div>
+    
 <form>
     <main>
       <div class="inputs" <label>DATE / TIME <p id="datetime"></p></label></div>
@@ -52,11 +47,20 @@
     <input type="range" min="10" max="25" step="0.5" class="slider" id="temperature-slider">
     <div id="temperature-display">&deg;C</div>
     <br/>
-    <div class="temporary-temp">temporary temp:</div>
-    <div class="temporary-time">Timer:</div>
+    
 
-    <h2>Temporary Tempuratre</h2>
+    <div>
+      <label>Temp Temperature&nbsp;</label
+        ><span class="temporary-temp" id="temporary-temp">21</span>
+        <span>°C</span>
+    </div>
+    <div>
+      <label>Timer:&nbsp;</label
+        ><span class="temporary-time" id="temporary-time">00:00:00</span>
       
+    </div>
+    
+
       
       <div class="input-temp">
         <label for="hours-input">Duration:</label>
