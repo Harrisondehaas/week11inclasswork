@@ -3,7 +3,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgb(31, 150, 110);
+  background-color: rgb(10, 142, 182);
 }
 
 li {
@@ -23,7 +23,7 @@ li a {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #8d2f2f;
+  background-color: #118a39;
 }
 .menu-li a {
   display: block;
@@ -34,7 +34,7 @@ li a {
   float: left;
 }
 li a:hover {
-  background-color: rgb(179, 19, 19);
+  background-color: rgb(10, 143, 99);
 }
 header {
   text-align: center;
@@ -97,7 +97,7 @@ body {
   background-color: white;
   margin: 0 auto;
   width: 700px;
-  border: 3px solid cornflowerblue;
+  border: 3px solid rgb(20, 34, 58);
   padding: 0 2em 1em;
 }
 h1 {
