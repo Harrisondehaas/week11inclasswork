@@ -7,11 +7,11 @@ const $ = (selector) => document.querySelector(selector);
 let imageCounter = 0;
 const caption = $("#caption");
 const mainImage = $("#main_image");
-const prevButton = document.getElementById("prev_button");
-const nextButton = document.getElementById("next_button");
+const prevButton = $("#prev_button");
+const nextButton = $("#next_button");
 
 // An array to hold preloaded images
-let imageCache = ['DirtBike.jpg', 'DirtBike2.jpg', 'DirtBike3.jpg', 'DirtBike4.jpg', 'DirtBike5.jpg' ];
+let imageCache = [];
 
 // Function to swap images and captions
 const swapImage = () => {
@@ -25,18 +25,22 @@ const swapImage = () => {
 
 
 nextButton.addEventListener("click", () => {
-    imageCounter = (imageCounter + 1) 
+    imageCounter = (imageCounter + 1) % 5
+
+    console.log(imageCounter)
     swapImage();
 });
+
 prevButton.addEventListener("click", () => {
-    imageCounter = (imageCounter - 1 )
+    imageCounter = (imageCounter - 1 ) % 5
+
     swapImage();
 });
 
 
 // Load images and add them to imageCache array
 document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll("a");
+    const links = document.querySelectorAll("#image_list a");
 
     for (let link of links) {
         let image = new Image();
