@@ -65,10 +65,14 @@ main{
   padding-top: 5%;
   background-color: aliceblue;
   
+  
 }
 .inputs{
-  font-size: x-large;
+  font-size: xx-large;
   
+}
+.BirthDay{
+  font-size: x-large;
 }
 body{
   padding-bottom: 5%;
@@ -78,14 +82,14 @@ body{
 }
 #reset-btn{
   background-color: lightblue;
-  border:transparent, 1px;
+ 
   border-radius: 40px;
   margin-left: 20px;
   
 }
 #submit-btn{
-background-color: greenyellow;
-
+background-color: rgb(47, 113, 255);
+width: 150px;
 
 }
 profile_pic{
@@ -99,9 +103,10 @@ body {
   width: 700px;
   border: 3px solid rgb(20, 34, 58);
   padding: 0 2em 1em;
+
 }
 h1 {
-  color: cornflowerblue;
+  color: rgb(114, 100, 237);
 }
 div {
   margin-bottom: .5em;
@@ -110,15 +115,17 @@ label {
   display: inline-block;
   width: 11em;
   text-align: right;
+  font-size: x-large
 }
 input {
   margin-left: 1em;
   margin-right: 0.5em;
+  font-size: x-large;
 }
 
 span {
   color:black;
-  font-size: 12px;
+  font-size: x-large;
 
 }
 
@@ -131,7 +138,8 @@ span {
 }
 
 label {
-  font-size: 12px;
+  font-size: 25px
+  ;
 }
 
 select {
@@ -142,7 +150,9 @@ select {
 
 button {
   margin-left: 1.5em;
-  width: 11em;
+  width: 10em
+  ;
+  font-size: x-large;
 }
 
 
@@ -160,7 +170,7 @@ p {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #8d2f2f;
+  background-color: #7d2f8d;
 }
 
 
@@ -186,4 +196,69 @@ p {
 }
 #main_image{
 width: 500px;
+}
+@media only screen and (max-width: 480px) {
+  /* Styles for screens with maximum width of 480px, such as iPhones */
+  .header {
+    font-size: 24px;
+  }
+}
+body {
+  text-align: center;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
+h1 {
+  margin-top: 50px;
+}
+.button1 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #af4caa;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+}
+.button2 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #4c9baf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+}.button3 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #c3e469;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-family: "Lucida Console", "Courier New", monospace;
+
+}
+.button:hover {
+  background-color: #a73854;
+}
+.result {
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: orange;
 }
